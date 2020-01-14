@@ -35,3 +35,9 @@ while increasing ease of debugging vision pipelines
 for testing code in simulation. Better interface allows larger code sharing
 between various components for parsing XML input and reducing errors due to
 spelling differences
+
+## License
+
+All code is licensed as MPL2. Please note that the license is not reproduced
+in each file or each package for brewity. For the complete license, please
+look at [LICENSE]
