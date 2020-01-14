@@ -1,0 +1,23 @@
+<library path="lib/librbot_cv_pipeline">
+  <class name="rbot_cv_pipeline/cvt_color"
+         type="rbot_cv_pipeline::CvtColorNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet to convert an image from one format to another
+    </description>
+  </class>
+  <class name="rbot_cv_pipeline/img_flip"
+         type="rbot_cv_pipeline::ImgFlipNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet to flip/rotate an image
+    </description>
+  </class>
+  <class name="rbot_cv_pipeline/stereo_image_splitter"
+         type="rbot_cv_pipeline::StereoImageSplitter"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      Nodelet to split a joint stereo image into two images
+    </description>
+  </class>
+</library>

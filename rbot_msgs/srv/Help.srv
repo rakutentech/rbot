@@ -1,0 +1,3 @@
+int8 verbosity  # 0 is least, negative is ignored
+---
+string message

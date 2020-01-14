@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="gz_folder" default="$(find rbot_sim_integration)/models/gazebo" />
+    <arg name="no_ros" default="false" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg gz_folder)/world/rbot.world" />
+        <arg name="verbose" value="true" />
+        <arg name="gui" value="false" />
+    </include>
+    <group ns="rbot">
+        <node pkg="gazebo_ros" type="spawn_model" respawn="false" name="spawn_rbot_a"
+            args="-file $(arg gz_folder)/model/turtlebot_new/model.sdf -sdf -model rbot_a -x 1 -y -1" />
+        <node pkg="gazebo_ros" type="spawn_model" respawn="false" name="spawn_rbot_b"
+            args="-file $(arg gz_folder)/model/turtlebot_new/model.sdf -sdf -model rbot_b -x -1 -y 1" />
+        <group if="$(arg no_ros)">
+            <node pkg="tf" type="static_transform_publisher" name="map_tf" ns="rbot_a"
+                args="0 0 0 0 0 0 1 map rbot_a/map 1000" />
+            <node pkg="tf" type="static_transform_publisher" name="map_tf" ns="rbot_b"
+                args="0 0 0 0 0 0 1 map rbot_b/map 1000" />
+        </group>
+    </group>
+</launch>

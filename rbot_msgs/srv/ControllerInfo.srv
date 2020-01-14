@@ -1,0 +1,6 @@
+string topic_name  # name of topic to subscribe
+
+# details about the topic and what to do with the data
+rbot_msgs/PriorityInputDetails details
+---
+bool success

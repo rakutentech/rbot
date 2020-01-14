@@ -1,0 +1,4 @@
+rbot_msgs/TimedTrajectoryPoint point
+---
+rbot_msgs/TwistBool max_velocity_exceeded
+bool time_horizon_is_short

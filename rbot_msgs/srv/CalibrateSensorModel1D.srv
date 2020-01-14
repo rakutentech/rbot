@@ -1,0 +1,5 @@
+# service to set a sensor error model
+
+rbot_msgs/SensorModel1D model
+---
+std_msgs/Empty response

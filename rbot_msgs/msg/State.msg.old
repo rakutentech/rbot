@@ -1,0 +1,14 @@
+# Timestamp, frame_id and sequence number
+Header header
+
+# Geometric Data
+geometry_msgs/Pose pose
+geometry_msgs/Twist velocity
+geometry_msgs/Accel acceleration
+
+# currently measured constraints
+geometry_msgs/Vector3 positive_constraints
+geometry_msgs/Vector3 negative_constraints
+
+rbot_msgs/Vector3Bool active_positive_constraints
+rbot_msgs/Vector3Bool active_negative_constraints
